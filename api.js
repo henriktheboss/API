@@ -1,20 +1,20 @@
 let out = ""
 let ut = document.getElementById("out")
-let checkmark
+
 
 function klikk(){
- fetch("https://jsonplaceholder.typicode.com/todos/10")
+ fetch("https://v6.exchangerate-api.com/v6/07e664c29b9b2782755ddd2d/latest/NOK")
 	 .then(respons => {
 		 out += respons.status
 		 return respons.json()
 	 })
 	 .then(data => {
-		 checkmark = data.completed ? "☑":"☐"
-		 out += "<br>"+checkmark+" "+data.title
+	
+		 out += "<br> "+data.result
 	 })
 	
  ut.innerHTML = out
- out = "hei"
+ out = ""
 }
 
 ut.textContent = out
