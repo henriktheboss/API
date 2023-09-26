@@ -1,25 +1,24 @@
-let out = ""
-let ut = document.getElementById("out")
-let inn = document.getElementById("inn")
+let out = document.getElementById("out")
+let valuttaInn = "NOK"
+let valuttaUt = "USD"
 
 
 function klikk(){
- fetch("https://v6.exchangerate-api.com/v6/07e664c29b9b2782755ddd2d/latest/NOK")
+ fetch("https://v6.exchangerate-api.com/v6/07e664c29b9b2782755ddd2d/latest/" +valuttaInn)
 	 .then(respons => {
-		 //out += respons.status
+		 out += respons.status
 		 return respons.json()
 	 })
 	 .then(data => {
-	
-		 
-		 out += inn.value
-		 out += "<br>" +(data.conversion_rates.USD * inn.value)
+		let amount = parseFloat(document.getElementById("amount").value)
+		let text = amount+" "+valuttaInn+ "="
+		let conversion = data.conversion_rates[valuttaUt] 
+		text += (conversion*amount) + valuttaUt
+		out.textContent = text
 
 
 	 })
 	
- ut.innerHTML = out
- out = ""
+
 }
 
-ut.value = out 
