@@ -8,8 +8,14 @@
 
 body
 {
-    background-color: rgb(95, 177, 95);
+    background: linear-gradient(to bottom, #4a148c, #9c27b0);
     justify-content: center;
     text-align: center;
     margin-top: 40%;
 }
+
+.bt
+{
+    margin-bottom: 20;
+}
+

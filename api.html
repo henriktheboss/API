@@ -6,13 +6,24 @@
     <div class="val">
 
         <h1>Vallutta kalkulator</h1>
-    <button onclick="klikk()">Kalkuler</button>
-    
+    <button class="bt" onclick="klikk()">Kalkuler</button>  <br>
 
-    <p id="out"></p>
-
-    <input id="amount" type="number">
     <div>
+    <select name="inval" id="inval">
+        <option value="NOK">NOK</option>
+        <option value="USD">USD</option>
+        <option value="AED">AED</option>
+    </select>
+    </div>
+
+  
+<div class="inputPenger">
+    <input id="amount" type="number">
+    <p>NOK</p>
+</div>
+    <div>
+
+        <p id="out"></p>
     <select name="valutar" id="valutar" style="margin: 10px;">
         <option value="USD">USD</option>
         <option value="AED">AED</option>
