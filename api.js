@@ -15,8 +15,8 @@ function klikk(){
 		let amount = parseFloat(document.getElementById("amount").value)
 		
 		let valgtPeng = valutar.value;
-		let conversion = data.conversion_rates[pengin] 
-		let text = (conversion*amount) + valgtPeng
+		let conversion = data.conversion_rates[valutar.value] 
+		let text = ""+(conversion*amount) + valgtPeng
 		out.textContent = text
 
 
