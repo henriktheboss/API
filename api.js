@@ -17,7 +17,7 @@ function klikk() {
         .then(data => {
             let conversion = data.conversion_rates[valutar.value];
             let result = (conversion * amount).toFixed(3); 
-            let text = result + valgtPeng;
+            let text = result + " " + valgtPeng; // Add a space character here
             out.textContent = text;
         });
 }
