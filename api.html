@@ -4,33 +4,27 @@
 <body>
 
     <div class="val">
-
         <h1>Vallutta kalkulator</h1>
-    <button class="bt" onclick="klikk()">Kalkuler</button>  <br>
-
-    <div>
-    <select name="inval" id="inval">
-        <option value="NOK">NOK</option>
-        <option value="USD">USD</option>
-        <option value="AED">AED</option>
-    </select>
+        <div class="textIn">
+            <select name="inval" id="inval">
+                <option value="NOK">NOK</option>
+                <option value="USD">USD</option>
+                <option value="AED">AED</option>
+            </select>
+            <div class="inputPenger">
+                <input id="amount" type="number">
+            </div>
+        </div>
+        <button class="bt" onclick="klikk()">=</button>  <br>
+        <div>
+            <p id="out"></p>
+            <select name="valutar" id="valutar">
+                <option value="USD">USD</option>
+                <option value="AED">AED</option>
+                <option value="NOK">NOK</option>
+            </select>
+        </div>
+      
     </div>
-
-  
-<div class="inputPenger">
-    <input id="amount" type="number">
-    <p>NOK</p>
-</div>
-    <div>
-
-        <p id="out"></p>
-    <select name="valutar" id="valutar" style="margin: 10px;">
-        <option value="USD">USD</option>
-        <option value="AED">AED</option>
-    </select>
-    </div>
-
-</div>
-   </body>
-
-   <script src="api.js"></script>
+    <script src="api.js"></script>
+</body>

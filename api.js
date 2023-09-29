@@ -1,11 +1,5 @@
-let out = document.getElementById("out");
-let valutar = document.getElementById("valutar");
-let inval = document.getElementById("inval");
-
 function klikk() {
     let pengin = inval.value;
-    
-   
     let amountField = document.getElementById("amount");
     if (amountField.value === "") {
         out.textContent = "Skriv inn tall";
@@ -22,7 +16,8 @@ function klikk() {
         })
         .then(data => {
             let conversion = data.conversion_rates[valutar.value];
-            let text = "" + (conversion * amount) + valgtPeng;
+            let result = (conversion * amount).toFixed(3); 
+            let text = result + valgtPeng;
             out.textContent = text;
         });
 }

@@ -1,21 +1,44 @@
-.val
-{
+body {
+    background: linear-gradient(to bottom, #4a148c, #9c27b0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.val {
     background-color: white;
     border-radius: 15px;
-    margin: 15%;
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
 }
 
-body
-{
-    background: linear-gradient(to bottom, #4a148c, #9c27b0);
-    justify-content: center;
-    text-align: center;
-    margin-top: 40%;
+.val h1 {
+    margin: 0;
 }
 
-.bt
-{
-    margin-bottom: 20;
+.textIn {
+    display: flex;
+    align-items: center;
 }
 
+#inval,
+#amount {
+    margin-right: 10px;
+}
+
+#amount {
+    width: 100px;
+}
+
+#out,
+#valutar {
+    margin: 10px;
+}
+
+.bt {
+    margin-bottom: 20px;
+}
